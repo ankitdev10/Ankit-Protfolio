@@ -1,0 +1,124 @@
+.h {
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.p {
+  background: linear-gradient(to right, rgba(0, 255, 255, 0.2) 30%, rgba(2, 0, 7, 0.9));
+  padding: 0 10px;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 0;
+  width: 300px;
+  height: 350px;
+}
+
+.p-img {
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.h-main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.h-title {
+  animation: animate 1s cubic-bezier(0, 0, 0, 1);
+  color: rgba(0, 255, 255, 0.7);
+  /* font-family: 'Open Sans', sans-serif; */
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translate(-50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.h-info {
+  height: 50px;
+  overflow: hidden;
+}
+
+.job-title {
+  height: 50px;
+  font-size: 1.5rem;
+  color: rgba(0, 255, 255, 0.7);
+ 
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 2rem;
+  animation: job 8s ease-in-out infinite alternate;
+  text-transform: uppercase;
+}
+
+@keyframes job {
+  25% {
+    transform: translateY(-50px);
+  }
+
+  50% {
+    transform: translateY(-100px);
+  }
+
+  75% {
+    transform: translateY(-150px);
+  }
+
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+
+@media screen and (max-width: 330px){
+  .h{
+    margin-top: 15px;
+    gap: 20px;
+  }
+  .p{
+    width: 200px;
+    height: 250px;
+  }
+
+  .p-img{
+    width: 200px;
+    height: 400px;
+  }
+  .h-main{
+    gap: 10px;
+  }
+  .h-title{
+    font-size: 1.5rem;
+  }
+  .job-title{
+    font-size: 1.2rem;
+  }
+} 
+
+@media screen and (min-width: 331px) and (max-width: 400px) {
+  .h-title{
+    font-size: 1.5rem;
+  }
+  .job-title{
+    font-size: 1.2rem;
+  }
+}
+
